@@ -29,4 +29,4 @@ yarn dev
 
 ## ライセンス - License
 
-MIT � [ichi0g0y](https://github.com/ichi0g0y)
+MIT © [ichi0g0y](https://github.com/ichi0g0y)
