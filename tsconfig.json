@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "allowJs": false,
+    "checkJs": false,
+    "sourceMap": true,
+    "rootDir": ".",
+    "outDir": "./dist",
+    "strict": true,
+    "jsx": "react",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/shared/*"],
+      "::/*": ["src/main/*"],
+      ":/*": ["src/renderer/*"],
+    }
+  },
+  "include": ["src/**/*", "webpack/**/*"],
+  "exclude": ["node_modules"]
+}

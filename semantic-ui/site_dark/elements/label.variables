@@ -1,0 +1,22 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+@backgroundColor: #2a2a2a;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Hover */
+@labelHoverBackgroundColor: @black;
+
+/* Active */
+@labelActiveBackgroundColor: @black;
+
+/* Active Hover */
+@labelActiveHoverBackgroundColor: @black;

@@ -1,0 +1,73 @@
+/*******************************
+         Site Variables
+*******************************/
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor : @blue;
+@secondaryColor : @black;
+
+@lightPrimaryColor : @lightBlue;
+@lightSecondaryColor : @lightBlack;
+
+/*--------------
+   Form Input
+---------------*/
+
+@inputBackground : #3c4043;
+
+@inputColor: @textColor;
+@inputPlaceholderColor: lighten(@inputColor, 75);
+@inputPlaceholderFocusColor: lighten(@inputColor, 45);
+
+/*-------------------
+    Focused Input
+--------------------*/
+
+/* Used on inputs, textarea etc */
+@focusedFormBorderColor: #85B7D9;
+
+/* Used on dropdowns, other larger blocks */
+@focusedFormMutedBorderColor: #96C8DA;
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground : #222222;
+
+@textColor : rgba(255, 255, 255, 0.87);
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor : #4183C4;
+@linkUnderline : none;
+@linkHoverColor : darken(saturate(@linkColor, 20), 15, relative);
+@linkHoverUnderline : @linkUnderline;
+
+/*-------------------
+     Neutral Text
+--------------------*/
+
+@darkTextColor : rgba(255, 255, 255, 0.85);
+@mutedTextColor : rgba(255, 255, 255, 0.6);
+@lightTextColor : rgba(255, 255, 255, 0.4);
+
+@unselectedTextColor : rgba(0, 0, 0, 0.4);
+@hoveredTextColor : rgba(255, 255, 255, 0.8);
+@pressedTextColor : rgba(255, 255, 255, 0.9);
+@selectedTextColor : rgba(255, 255, 255, 0.95);
+@disabledTextColor : rgba(255, 255, 255, 0.2);
+
+/*-------------------
+      Borders
+--------------------*/
+
+@internalBorderColor : darken(@inputBackground, 10);
+@solidInternalBorderColor : darken(@inputBackground, 10);
+
+@solidBorderColor : lighten(@inputBackground, 20);
