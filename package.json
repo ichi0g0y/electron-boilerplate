@@ -28,11 +28,13 @@
       "main": "./app/main.js"
     },
     "files": [
+      "app/asset/**/*",
       "app/static/**/*",
-      "app/about/**/*",
+      "app/about.html",
       "app/preference.html",
       "app/translate.html",
       "app/main.js",
+      "app/about.js",
       "app/preference.js",
       "app/translate.js",
       "package.json"
