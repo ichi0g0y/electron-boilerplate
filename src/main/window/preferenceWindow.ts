@@ -3,11 +3,13 @@ import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electro
 import * as path from 'path';
 import * as url from 'url';
 
+import isMac from '#/lib/isMac';
+
 export let preferenceWindow: BrowserWindow | undefined;
 
 // windows bounds
 const DEFAULT_WIDTH = 800;
-const DEFAULT_HEIGHT = 400;
+const DEFAULT_HEIGHT = 630;
 
 // for debug
 const installExtensions = async () => {
@@ -70,14 +72,15 @@ export const createPreferenceWindow = async () => {
     height: DEFAULT_HEIGHT,
     minWidth: DEFAULT_WIDTH,
     minHeight: DEFAULT_HEIGHT,
-    transparent: false,
-    frame: true,
-    titleBarStyle: 'hidden',
-    minimizable: false,
+    transparent: isMac(),
+    frame: false,
+    resizable: true,
     maximizable: false,
-    alwaysOnTop: false,
+    minimizable: false,
+    closable: true,
+    alwaysOnTop: true,
     show: false,
-    modal: true,
+    hasShadow: true,
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
@@ -89,7 +92,7 @@ export const createPreferenceWindow = async () => {
   // load html
   let rendererUrl = '';
   if (!app.isPackaged) {
-    rendererUrl = 'http://localhost:3000/preference.html';
+    rendererUrl = 'http://localhost:3100/preference.html';
     preferenceWindow.webContents.openDevTools();
   } else {
     rendererUrl = url.format({

@@ -1,0 +1,18 @@
+export default {
+  primaryA: '#ff79c6',
+  primaryB: '#ffacdc',
+  primaryC: '#ffdff1',
+  primaryD: '#fff8fc',
+  backgroundA: '#1d1f27',
+  backgroundB: '#282a36',
+  backgroundC: '#333544',
+  backgroundD: '#494c62',
+  backgroundE: '#535871',
+  textA: '#f3f3f3',
+  textB: '#efefe1',
+  textC: '#ababab',
+  textD: '#929292',
+  textE: '#7f839e',
+  shadowA: 'rgba(0, 0, 0, 0.6)',
+  shadowB: 'rgba(0, 0, 0, 0.4)',
+};

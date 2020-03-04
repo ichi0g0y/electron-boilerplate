@@ -44,7 +44,7 @@ export default merge.smart(baseConfig, {
     }),
   ],
   devServer: {
-    port: 3000,
+    port: 3100,
     compress: true,
     noInfo: true,
     stats: 'errors-only',

@@ -29,13 +29,18 @@
           "disableSort": false
         },
         {
-          "regex": "^::/",
+          "regex": "^#/",
           "orderLevel": 100,
           "disableSort": false
         },
         {
-          "regex": "^:/",
+          "regex": "^::/",
           "orderLevel": 150,
+          "disableSort": false
+        },
+        {
+          "regex": "^:/",
+          "orderLevel": 200,
           "disableSort": false
         },
         {

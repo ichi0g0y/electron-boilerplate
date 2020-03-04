@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setCount } from '@/store/mainSlice';
-import { MyState } from '@/store/renderer';
+import { setCount } from '#/store/mainSlice';
+import { MyState } from '#/store/renderer';
 
 /*-----------------------------------------------------------------------------*/
 export const useCount = () => {

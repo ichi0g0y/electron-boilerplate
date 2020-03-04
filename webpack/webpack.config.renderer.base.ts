@@ -1,4 +1,3 @@
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import merge from 'webpack-merge';
@@ -9,6 +8,7 @@ import baseConfig from './webpack.config.base';
 export default merge.smart(baseConfig, {
   target: 'electron-renderer',
   entry: {
+    about: path.join(paths.SRC_RENDERER, 'about.tsx'),
     preference: path.join(paths.SRC_RENDERER, 'preference.tsx'),
     main: path.join(paths.SRC_RENDERER, 'main.tsx'),
   },
@@ -67,6 +67,11 @@ export default merge.smart(baseConfig, {
   performance: { hints: false },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: path.resolve(paths.SRC_RENDERER, 'about.html'),
+      chunks: ['about'],
+    }),
+    new HtmlWebpackPlugin({
       filename: 'preference.html',
       template: path.resolve(paths.SRC_RENDERER, 'preference.html'),
       chunks: ['preference'],
@@ -76,12 +81,5 @@ export default merge.smart(baseConfig, {
       template: path.resolve(paths.SRC_RENDERER, 'main.html'),
       chunks: ['main'],
     }),
-    new CopyWebpackPlugin([
-      {
-        from: path.join(paths.ROOT, '/theme'),
-        to: path.join(paths.ROOT, '/app/theme'),
-        ignore: ['.*', '*.js'],
-      },
-    ]),
   ],
 });

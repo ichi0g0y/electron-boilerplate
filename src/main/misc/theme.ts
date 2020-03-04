@@ -1,4 +1,4 @@
-import { MyThemeName, setOnUpdate } from '@/store/themeSlice.aid';
+import { MyThemeName, setOnUpdate } from '#/store/themeSlice.aid';
 
 import { configTheme } from './config';
 

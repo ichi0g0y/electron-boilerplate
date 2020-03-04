@@ -8,7 +8,7 @@ export const SRC_ROOT = resolvePath('src');
 export const SRC_SHARED = path.resolve(SRC_ROOT, 'shared');
 export const SRC_MAIN = path.resolve(SRC_ROOT, 'main');
 export const SRC_RENDERER = path.resolve(SRC_ROOT, 'renderer');
-export const SRC_SEMANTIC_UI = path.resolve(ROOT, 'semantic-ui');
+export const MISC = path.resolve(ROOT, 'misc');
 export const OUTPUT = resolvePath('app');
 export const NODE_MODULES = resolvePath('node_modules');
 

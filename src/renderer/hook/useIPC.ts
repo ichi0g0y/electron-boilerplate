@@ -6,8 +6,16 @@ export const useIPC = () => {
     ipcRenderer.send('openAbout');
   }, []);
 
+  const closeAbout = useCallback(() => {
+    ipcRenderer.send('closeAbout');
+  }, []);
+
   const openPreference = useCallback(() => {
     ipcRenderer.send('openPreference');
+  }, []);
+
+  const closePreference = useCallback(() => {
+    ipcRenderer.send('closePreference');
   }, []);
 
   const quitApp = useCallback(() => {
@@ -16,7 +24,9 @@ export const useIPC = () => {
 
   return {
     openAbout,
+    closeAbout,
     openPreference,
+    closePreference,
     quitApp,
   };
 };

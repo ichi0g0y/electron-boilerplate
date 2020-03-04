@@ -13,7 +13,6 @@ export const useHover = () => {
 
   return {
     hover,
-    setHover,
     setHoverFalse,
     setHoverTrue,
   };

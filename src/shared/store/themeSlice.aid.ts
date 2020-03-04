@@ -1,11 +1,11 @@
-import stringToEnum from '@/lib/stringToEnum';
+import stringToEnum from '#/lib/stringToEnum';
 
 export type OnUpdateEvent = (name: MyThemeName) => void;
 export let onUpdate: OnUpdateEvent;
 export const setOnUpdate = (func: OnUpdateEvent) => (onUpdate = func);
 
 /*-----------------------------------------------------------------------------*/
-export const MyThemeName = stringToEnum(['light', 'dark']);
+export const MyThemeName = stringToEnum(['light', 'dark', 'dracula']);
 export type MyThemeName = keyof typeof MyThemeName;
 export interface MyThemeState {
   name: MyThemeName;

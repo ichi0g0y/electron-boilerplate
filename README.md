@@ -13,7 +13,6 @@ A warning may have been issued.
 - typescript
 - electron
 - react + redux
-- semantic-ui-react with theme
 - emotion
 - webpack
 - no babel

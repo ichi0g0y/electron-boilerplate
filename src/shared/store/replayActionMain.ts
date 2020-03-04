@@ -1,7 +1,6 @@
 import { EnhancedStore } from '@reduxjs/toolkit';
 import { ipcMain } from 'electron';
 
-// electron-redux hack
 export const replayActionMain = (store: EnhancedStore) => {
   global.getReduxState = () => JSON.stringify(store.getState());
 

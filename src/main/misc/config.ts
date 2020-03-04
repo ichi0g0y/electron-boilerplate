@@ -1,7 +1,7 @@
 import { screen } from 'electron';
 import ElectronStore from 'electron-store';
 
-import { MyThemeName, setInitialState as setInitialStateTheme } from '@/store/themeSlice.aid';
+import { MyThemeName, setInitialState as setInitialStateTheme } from '#/store/themeSlice.aid';
 
 /*-----------------------------------------------------------------------------*/
 type configThemeProps = {

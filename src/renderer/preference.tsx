@@ -1,10 +1,11 @@
 import 'react-hot-loader';
+import 'tippy.js/dist/tippy.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import store from '@/store/renderer';
+import store from '#/store/renderer';
 
 import Preference from './view/page/Preference';
 

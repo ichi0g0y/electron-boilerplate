@@ -1,62 +1,70 @@
 import { useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { OptionTypeBase } from 'react-select';
 
-import { MyState } from '@/store/renderer';
-import { setTheme } from '@/store/themeSlice';
-import { MyThemeName } from '@/store/themeSlice.aid';
+import { MyState } from '#/store/renderer';
+import { setTheme as setThemeToSlice } from '#/store/themeSlice';
+import { MyThemeName } from '#/store/themeSlice.aid';
 
-import { darkTheme, lightTheme } from ':/theme';
-import { globalDarkCSS, globalLightCSS } from ':/theme/globalCSS';
+import { globalDark, globalDracula, globalLight, themeDark, themeDracula, themeLight } from ':/theme';
+
+export interface MyThemeOptionType extends OptionTypeBase {
+  label: string;
+  value: MyThemeName;
+}
 
 /*-----------------------------------------------------------------------------*/
 export const useTheme = () => {
   const { name } = useSelector((state: MyState) => state.theme);
   const dispatch = useDispatch();
 
-  const setThemeName = useCallback((themeName: MyThemeName) => {
-    dispatch(setTheme(themeName));
+  const setTheme = useCallback((theme: MyThemeOptionType) => {
+    dispatch(setThemeToSlice(theme.value));
   }, []);
 
-  const getGlobalCSS = useCallback(() => {
+  const getGlobal = useCallback((name: MyThemeName) => {
     switch (name) {
       case MyThemeName.light:
-        return globalLightCSS;
+        return globalLight;
       case MyThemeName.dark:
-        return globalDarkCSS;
+        return globalDark;
+      case MyThemeName.dracula:
+        return globalDracula;
       default:
-        return globalLightCSS;
+        return globalLight;
     }
-  }, [name]);
+  }, []);
 
-  const getTheme = useCallback(() => {
+  const getTheme = useCallback((name: MyThemeName) => {
     switch (name) {
       case MyThemeName.light:
-        return lightTheme;
+        return themeLight;
       case MyThemeName.dark:
-        return darkTheme;
+        return themeDark;
+      case MyThemeName.dracula:
+        return themeDracula;
       default:
-        return lightTheme;
+        return themeLight;
     }
-  }, [name]);
+  }, []);
 
-  const themes = useMemo(
+  const themes: MyThemeOptionType[] = useMemo(
     () =>
       Object.keys(MyThemeName).map(name => ({
-        key: name,
-        value: name,
-        text: name,
+        value: name as MyThemeName,
+        label: name,
       })),
     []
   );
 
-  const current = useMemo(() => getTheme(), [name]);
-  const currentGlobalCSS = useMemo(() => getGlobalCSS(), [name]);
+  const current = useMemo(() => getTheme(name), [name]);
+  const currentGlobal = useMemo(() => getGlobal(name), [name]);
 
   return {
     name,
     themes,
     current,
-    currentGlobalCSS,
-    setThemeName,
+    currentGlobal,
+    setTheme,
   };
 };
