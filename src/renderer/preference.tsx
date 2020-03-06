@@ -10,12 +10,11 @@ import store from '#/store/renderer';
 import Preference from './view/page/Preference';
 
 const render = (Component: React.FunctionComponent) => {
-  const rootElement = document.getElementById('root');
   ReactDOM.render(
     <Provider store={store}>
       <Component />
     </Provider>,
-    rootElement
+    document.body
   );
 };
 
