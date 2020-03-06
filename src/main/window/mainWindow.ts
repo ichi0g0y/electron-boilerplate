@@ -47,7 +47,6 @@ const applyEventHandlers = () => {
   mainWindow.on('blur', () => {
     if (!mainWindow) return;
     console.debug('main window -> blur');
-    mainWindow.hide();
   });
 
   // event: close
