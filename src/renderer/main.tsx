@@ -10,11 +10,12 @@ import store from '#/store/renderer';
 import Main from './view/page/Main';
 
 const render = (Component: React.FunctionComponent) => {
+  const rootElement = document.getElementById('root');
   ReactDOM.render(
     <Provider store={store}>
       <Component />
     </Provider>,
-    document.body
+    rootElement
   );
 };
 
