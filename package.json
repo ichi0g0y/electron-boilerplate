@@ -91,7 +91,7 @@
     "electron-redux": "^1.4.0",
     "electron-store": "^5.1.0",
     "emotion-theming": "^10.0.27",
-    "immer": "^5.0.2",
+    "immer": "^8.0.1",
     "lodash": "^4.17.15",
     "moment-timezone": "^0.5.27",
     "react": "^16.12.0",
